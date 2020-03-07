@@ -19,10 +19,9 @@ int main(int argc, char** argv){
         return 0;
     }
    
-    while(!feof(file)){
-        fscanf(file, "%[^\n]", texto);
-        fscanf(file, "%*c");
+    while(fscanf(file, "%[^\n]", texto) == 1){  
         printf("%s\n", texto);
+        fscanf(file, "%*c");
     }
 
    return 0;
