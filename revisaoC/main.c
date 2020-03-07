@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "listaExercicio.h"
 
 int main(int argc, char** argv){
     char nameFloder[100];
@@ -23,6 +24,9 @@ int main(int argc, char** argv){
         printf("%s\n", texto);
         fscanf(file, "%*c");
     }
+    tStudent student;
+    student = setStudent("soza", 10);
+    getNameStudent(student);
 
    return 0;
 }
